@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Markdown Reader</title>
+  <link rel="stylesheet" href="style.css">
+  <link 
+    rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css"
+  >
+</head>
+
+<body>
+  <div class="title-bar">
+    <nav id="menu-items">
+      <ul>
+        <li class="dropdown">
+          <a href="#" class="menu-item">File</a>
+          <ul class="dropdown-content">
+            <li><a href="#" id="open" class="submenu-item" title="Open file">Open File...<span class="shortcut">Ctrl+O</span></a></li>
+            <li><a href="#" id="new" class="submenu-item" title="Open a new window">New Window<span class="shortcut">Ctrl+N</span></a></li>
+            <li><hr /></li>
+            <li><a href="#" id="save" class="submenu-item disabled" title="Save this snippet">Save<span class="shortcut">Ctrl+S</span></a></li>
+            <li><a href="#" id="save-as" class="submenu-item disabled" title="Save this snippet as">Save As<span class="shortcut"></span></a></li>
+            <li><hr /></li>
+            <li><a href="#" id="close-window" class="submenu-item" title="Close this window">Close Window<span class="shortcut">Ctrl+W</span></a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="menu-item">View</a>
+          <ul class="dropdown-content">
+            <li><a href="#" id="reload" class="submenu-item" title="Reload App View">Reload<span class="shortcut">F5</span></a></li>
+            <li><hr /></li>
+            <li><a href="#" id="full" class="submenu-item" title="View CodePad in Fullscreen">Toggle Fullscreen<span class="shortcut">F11</span></a></li>
+            <li><a href="#" id="dev" class="submenu-item" title="View Developer Tools (Inspector, Console, etc.)">Toggle Developers Tools<span class="shortcut">F12</span></a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="menu-item">Help</a>
+          <ul class="dropdown-content" id="help-menu">
+            <li><a href="https://github.com/Jay9596/CodePad/releases" id="check-updates" class="submenu-item" title="View updates on website">Check for updates..</a></li>
+            <li><a href="https://www.github.com/thecodepad/codepad" id="contribute" class="submenu-item" title="View Codepad on GitHub &#9825;">Contribute</a></li>
+            <li><hr /></li>
+            <li><a href="https://thecodepad.github.io" id="about" class="submenu-item" title="About Markdown Reader">About</a></li>
+          </ul>
+        </li>
+      </ul>
+      
+      <span id="title-center" title="Markdown Reader">Markdown Reader &beta;</span>
+      <div id="window-control">
+        <div id="min-button" class="buttons" title="Minimize"></div>
+        <div id="max-button" class="buttons" title="Maximize"></div>
+        <div id="close-button" class="buttons" title="Close"></div>
+      </div>
+    </nav>
+  </div>
+  <div class="render">
+    <div class="container">
+      <!--input type="button" value="+" class="select-file"/>
+      <button class="close">&#10006;</button-->
+      <div class="md">
+          <div id="dropZone">Drop .md files here</div>
+      </div>    
+    </div>
+  </div>
+  <script src="./script.js"></script>
+</body>
+
+</html>
