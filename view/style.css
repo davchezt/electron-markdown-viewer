@@ -212,7 +212,7 @@ li.dropdown {
   background-color: #24292e; /*rgba(100, 100, 100, 0.7);*/
 }
 .render::-webkit-scrollbar-corner {
-  sbackground: transparent;
+  background: transparent;
 }
 code.hljs {
   border-radius: 4px;
