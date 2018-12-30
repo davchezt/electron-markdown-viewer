@@ -6,7 +6,7 @@
 * drag and drop
 * multy windows
 
-![Preview 1](https://raw.githubusercontent.com/davchezt/electron-markdown-viewer/master/tray-notif.gif)
+![Preview 1](https://raw.githubusercontent.com/davchezt/electron-markdown-viewer/master/markdown-viewer.gif)
 
 
 ## Install
