@@ -11,6 +11,13 @@ const {
   MenuItem
 } = remote
 const menu = require('./windowControll');
+const Store = require('./store');
+const config = new Store({
+  configName: 'settings',
+  defaults: {
+    // ip: "192.168.0.101"
+  }
+});
 
 const readFile = (file) => {
   fs.readFile(file, (err, data) => {
@@ -67,9 +74,18 @@ const close = e => {
   window.close()
 }
 
-onload = () => {
+onload = async () => {
   // document.querySelector('.close').addEventListener('click', close)
   // document.querySelector('.select-file').addEventListener('click', openFilePicker);
+
+  let ip = config.get("ip");
+  if (undefined === ip) {
+    await config.set("ip", "192.168.0.102");
+
+    ip = config.get("ip");
+  }
+  
+  console.log(ip);
 
   document.getElementById('dropZone').addEventListener('click', openFilePicker);
 
